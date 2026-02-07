@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SmartDine | Restaurant Ordering</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🍽️ SmartDine</h1>
+  <p>Order smart. Eat happy.</p>
+</header>
+
+<div class="container">
+
+  <!-- MENU -->
+  <section>
+    <h2>Menu</h2>
+    <div class="menu-grid">
+
+      <div class="menu-card">
+        <img src="images/meals.jpg">
+        <h3>Non - Veg Meals</h3>
+        <p>₹120</p>
+        <button onclick="addItem('Veg Meals',120)">Add</button>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/curd_rice.jpg">
+        <h3>Curd Rice</h3>
+        <p>₹70</p>
+        <button onclick="addItem('Curd Rice',70)">Add</button>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/sambar_rice.jpg">
+        <h3>Sambar Rice</h3>
+        <p>₹80</p>
+        <button onclick="addItem('Sambar Rice',80)">Add</button>
+      </div>
+
+      <div class="menu-card">
+        <img src="images/jamun.jpg">
+        <h3>Gulab Jamun</h3>
+        <p>₹50</p>
+        <button onclick="addItem('Gulab Jamun',50)">Add</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ORDER -->
+<section id="print-area">
+  <h2>Your Order</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Total</th>
+        <th class="no-print">Remove</th>
+      </tr>
+    </thead>
+    <tbody id="order-body"></tbody>
+  </table>
+
+  <h3 class="grand-total">
+    Grand Total: ₹<span id="grandTotal">0</span>
+  </h3>
+
+  <!-- THIS BUTTON -->
+  <button class="print-btn" onclick="printBill()">🖨 Print Bill</button>
+</section>
+
+
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
