@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background: #f7f8fc;
+  color: #1f2937;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+nav {
+  background: #ffffff;
+  padding: 16px 40px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav strong {
+  font-size: 1.2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #4f46e5;
+  font-weight: 600;
+  margin-left: 18px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* LAYOUT */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #4f46e5;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #6b7280;
+  margin-bottom: 30px;
+}
+
+/* CARDS */
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.07);
+  margin-bottom: 25px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* FUN BLOCK */
+.highlight {
+  background: #eef2ff;
+  padding: 12px 16px;
+  border-left: 4px solid #4f46e5;
+  margin: 25px 0;
+  border-radius: 6px;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
