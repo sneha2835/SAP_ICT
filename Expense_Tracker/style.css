@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.bg-pattern {
+  background-color: #0f172a;
+  background-image: radial-gradient(#1e293b 1px, transparent 1px);
+  background-size: 22px 22px;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  color: #e5e7eb;
+  padding: 30px;
+}
+
+.app {
+  max-width: 900px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #a5b4fc;
+}
+
+header p {
+  color: #c7d2fe;
+}
+
+/* Cards */
+.card {
+  background: white;
+  color: #1f2937;
+  padding: 20px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  margin-bottom: 12px;
+}
+
+/* Inputs */
+input, select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid #e5e7eb;
+  width: 100%;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Form grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 10px;
+}
+
+/* Summary */
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.summary-box {
+  padding: 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.income { background: #dcfce7; color: #166534; }
+.expense { background: #fee2e2; color: #7f1d1d; }
+.balance { background: #e0e7ff; color: #1e3a8a; }
+
+/* List */
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 10px;
+  border-bottom: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Print */
+/* existing styles remain SAME */
+
+/* 🔒 PRINT MODE — VERY IMPORTANT */
+#printArea {
+  display: none;
+  font-family: "Segoe UI", sans-serif;
+}
+
+@media print {
+  body {
+    background: white !important;
+    color: black;
+    padding: 20px;
+  }
+
+  #appUI {
+    display: none !important;
+  }
+
+  #printArea {
+    display: block;
+  }
+
+  h2 {
+    margin-bottom: 10px;
+  }
+
+  .print-category {
+    margin: 20px 0;
+    font-weight: bold;
+  }
+
+  #printList div {
+    margin-bottom: 10px;
+  }
+}
+

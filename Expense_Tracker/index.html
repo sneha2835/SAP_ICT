@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SpendWise | Expense Tracker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-pattern">
+
+<div class="app" id="appUI">
+  <header>
+    <h1>SpendWise 💸</h1>
+    <p>Track • Analyze • Control your expenses</p>
+  </header>
+
+  <!-- Budget -->
+  <section class="card">
+    <h3>Set Monthly Budget</h3>
+    <input type="number" id="budgetInput" placeholder="Enter budget amount">
+    <button onclick="setBudget()">Save Budget</button>
+  </section>
+
+  <!-- Add Transaction -->
+  <section class="card">
+    <h3>Add Transaction</h3>
+    <div class="form-grid">
+      <input type="text" id="descInput" placeholder="Description">
+      <input type="number" id="amountInput" placeholder="Amount">
+      <select id="categoryInput">
+        <option>Food</option>
+        <option>Travel</option>
+        <option>Shopping</option>
+        <option>Education</option>
+        <option>Other</option>
+      </select>
+      <select id="typeInput">
+        <option value="expense">Expense</option>
+        <option value="income">Income</option>
+      </select>
+    </div>
+    <button onclick="addTransaction()">Add</button>
+  </section>
+
+  <!-- Summary -->
+  <section class="summary">
+    <div class="summary-box income">Income ₹<span id="income">0</span></div>
+    <div class="summary-box expense">Expense ₹<span id="expense">0</span></div>
+    <div class="summary-box balance">Balance ₹<span id="balance">0</span></div>
+  </section>
+
+  <!-- Controls -->
+  <section class="card">
+    <select onchange="filterCategory(this.value)">
+      <option value="all">All Categories</option>
+      <option>Food</option>
+      <option>Travel</option>
+      <option>Shopping</option>
+      <option>Education</option>
+      <option>Other</option>
+    </select>
+    <button onclick="printReport()">🖨 Print</button>
+  </section>
+
+  <!-- History -->
+  <section class="card">
+    <h3>Transaction History</h3>
+    <ul id="list"></ul>
+  </section>
+</div>
+
+<!-- ✅ PRINT-ONLY SECTION -->
+<div id="printArea">
+  <h2>Income ₹<span id="pIncome"></span></h2>
+  <h2>Expense ₹<span id="pExpense"></span></h2>
+  <h2>Balance ₹<span id="pBalance"></span></h2>
+
+  <p class="print-category">All Categories</p>
+
+  <h3>Transaction History</h3>
+  <div id="printList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
