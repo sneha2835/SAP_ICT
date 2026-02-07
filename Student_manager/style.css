@@ -1,0 +1,177 @@
+:root {
+  --primary: #6366f1;
+  --secondary: #ec4899;
+  --success: #22c55e;
+  --danger: #ef4444;
+  --text: #1f2937;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🔥 BACKGROUND OPTIONS */
+
+/* 1️⃣ Patterned Dark (ACTIVE) */
+body.bg-pattern {
+  background-color: #0f172a;
+  background-image: radial-gradient(#1e293b 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+/* 2️⃣ Solid Bold Dark */
+body.bg-solid {
+  background-color: #111827;
+}
+
+/* 3️⃣ Split Panel */
+body.bg-split {
+  background:
+    linear-gradient(#0f172a, #0f172a) left / 35% 100% no-repeat,
+    #f8fafc;
+}
+
+/* BASE BODY */
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  min-height: 100vh;
+  padding: 30px;
+  color: var(--text);
+}
+
+/* APP */
+.app {
+  max-width: 1150px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #a5b4fc;
+}
+
+header p {
+  color: #c7d2fe;
+}
+
+/* ENTRY FORM */
+.entry-box {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+.entry-box input {
+  padding: 14px;
+  border-radius: 10px;
+  border: 2px solid #e5e7eb;
+}
+
+.entry-box input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.entry-box button {
+  grid-column: span 2;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  padding: 14px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* PRINT BUTTON */
+.export-box {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+.export-box button {
+  background: #64748b;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* TABLE */
+.data-box {
+  background: white;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  background: #eef2ff;
+  padding: 18px;
+  text-align: left;
+  color: #4338ca;
+}
+
+td {
+  padding: 16px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.pass {
+  color: var(--success);
+  font-weight: bold;
+}
+
+.fail {
+  color: var(--danger);
+  font-weight: bold;
+}
+
+.edit-btn {
+  background: #facc15;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* PRINT MODE */
+@media print {
+  .entry-box,
+  .export-box,
+  .edit-btn,
+  .edit-col {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .data-box {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
